@@ -1,6 +1,7 @@
 import math
 from itertools import count
 from math import isqrt
+from struct import pack_into
 
 #// perfect number
 # n=28                         ##//sqrt of 28 is 5*5=25 6*6=36 so 5
@@ -24,7 +25,7 @@ from math import isqrt
 #     count+=1
 #     num-=1
 # print(count)
-#
+
 # n=9
 # sum=0
 # for i in range(1,isqrt(n)+1):
@@ -33,12 +34,18 @@ from math import isqrt
 #     else:
 #         break
 # print(sum)
+#
+# a="2"
+# b="4"
+# n=pow(int(a),int(b),10)
+# print(n)
 
-a=2
-b=4
-c=a
-
-a=b
-b=c
-print(a,b)
-
+n=23
+temp=str(n)
+count=0
+for i in temp:
+    if int(i)==0:
+        count+=0
+    elif n%int(i)==0:
+        count+=1
+print(count)
