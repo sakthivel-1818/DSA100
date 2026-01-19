@@ -1,5 +1,5 @@
 def printNos(n):
-    if n == 0:
-        return 0
-    return n + printNos(n-1)
-print(printNos(3))
+    if n%10==n:
+        return 1
+    return 1+printNos(n//10)
+print(printNos(n=342))
